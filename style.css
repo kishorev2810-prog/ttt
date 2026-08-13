@@ -1,0 +1,223 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f5f5;
+color:#222;
+transition:.4s;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+background:white;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+}
+
+.logo{
+color:#0066ff;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:black;
+font-weight:500;
+}
+
+.menu{
+display:none;
+font-size:30px;
+cursor:pointer;
+}
+
+#theme-btn{
+border:none;
+background:none;
+font-size:20px;
+cursor:pointer;
+}
+
+.hero{
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:130px 8%;
+min-height:100vh;
+}
+
+.hero img{
+width:200px;
+border-radius:80%;
+box-shadow:0 0 30px rgba(0,0,0,.2);
+height: 200px;
+}
+
+.hero-text h1{
+font-size:55px;
+}
+
+.hero-text span{
+color:#0066ff;
+}
+
+.hero-text h2{
+margin:20px 0;
+}
+
+.btn{
+display:inline-block;
+padding:12px 30px;
+background:#0066ff;
+color:white;
+text-decoration:none;
+border-radius:30px;
+margin-top:20px;
+}
+
+section{
+padding:100px 8%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:35px;
+}
+
+.skill-container,
+.project-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card,
+.project,
+.edu{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+text-align:center;
+}
+
+.card:hover,
+.project:hover{
+transform:translateY(-10px);
+}
+
+.timeline{
+display:grid;
+gap:20px;
+}
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,
+textarea{
+padding:15px;
+border-radius:10px;
+border:1px solid gray;
+}
+
+button{
+padding:15px;
+background:#0066ff;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#111;
+color:white;
+}
+
+.fade{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.dark{
+background:#121212;
+color:white;
+}
+
+.dark header{
+background:#1f1f1f;
+}
+
+.dark .card,
+.dark .project,
+.dark .edu{
+background:#222;
+color:white;
+}
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.nav-links{
+display:none;
+position:absolute;
+right:20px;
+top:70px;
+background:white;
+flex-direction:column;
+padding:20px;
+border-radius:10px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu{
+display:block;
+}
+
+}
+.nav-links a:hover{
+    color: #0066ff;
+    transform: scale(500px,500px);
+}
